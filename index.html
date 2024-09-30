@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kunal Sharma's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Night mode toggle
+        function toggleNightMode() {
+            const body = document.body;
+            const icon = document.getElementById('mode-icon');
+
+            // Toggle the class that switches the theme
+            if (body.classList.contains('bg-white')) {
+                body.classList.remove('bg-white', 'text-black');
+                body.classList.add('bg-black', 'text-gray-600');
+                icon.src = 'https://img.icons8.com/ios-filled/50/ffffff/sun.png'; // Sun icon for light mode
+            } else {
+                body.classList.remove('bg-black', 'text-white');
+                body.classList.add('bg-white', 'text-black');
+                icon.src = 'https://img.icons8.com/ios-filled/50/000000/moon-symbol.png'; // Moon icon for dark mode
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white text-black transition-colors duration-500">
+
+    <!-- Header -->
+    <header class="flex justify-between items-center p-6 bg-blue-500">
+        <h1 class="text-4xl font-bold text-white">Kunal Sharma</h1>
+        <button onclick="toggleNightMode()"
+            class="flex items-center bg-gray-700 text-white px-4 py-2 rounded-3xl hover:bg-gray-600 transition-colors">
+            <img id="mode-icon" src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png" alt="Night Mode"
+                class="w-6 h-6 mr-2" />
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+
+        <!-- About Me Section with 3D design -->
+        <section id="about" class="my-8 p-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl shadow-2xl">
+            <h2 class="text-3xl font-semibold mb-4 text-white">About Me</h2>
+            <p class="text-lg text-white">
+                I'm Kunal Sharma, a 4th-year B.Tech Computer Science undergraduate. Passionate about coding, web
+                development, AI, and project management.
+            </p>
+        </section>
+
+        <!-- Internship Section with hover effect -->
+        <section id="internships" class="my-8">
+            <h2 class="text-3xl font-semibold mb-4">Internships</h2>
+            <ul class="space-y-4">
+                <li class="p-4 bg-gray-100 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform">
+                    <h3 class="text-xl font-bold">CODSOFT - Web Development</h3>
+                    <p>September 2023 - October 2023</p>
+                </li>
+                <li class="p-4 bg-gray-100 rounded-xl shadow-lg transform hover:-translate-y-1 transition-transform">
+                    <h3 class="text-xl font-bold">IBM SkillBuild Program with CSRBOX - AI/ML</h3>
+                    <p>June 2024 - July 2024</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="my-8">
+            <h2 class="text-3xl font-semibold mb-4">Technical Skills</h2>
+            <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">C</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">C++</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">HTML</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">CSS</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">JavaScript
+                </li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Tailwind
+                    CSS</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Project
+                    Management</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Python</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">SQL</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Video
+                    Editing</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Canva</li>
+                <li class="bg-blue-200 p-4 rounded-lg shadow transform hover:scale-105 transition-transform">Photoshop
+                </li>
+            </ul>
+        </section>
+
+        <!-- Linktree Section -->
+        <section id="links" class="my-8">
+            <h2 class="text-3xl font-semibold mb-4">Connect with Me</h2>
+            <ul class="space-y-4">
+                <li>
+                    <a href="https://linktr.ee/yourlink" class="text-blue-500 hover:underline">My Linktree</a> - All my
+                    social links, GitHub projects, and LinkedIn experience are available here.
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-4 bg-blue-500 shadow-lg">
+        <p class="text-white">&copy; 2024 Kunal Sharma | B.Tech Computer Science</p>
+    </footer>
+
+</body>
+
+</html>
